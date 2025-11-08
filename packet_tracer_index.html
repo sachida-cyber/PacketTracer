@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Packet Tracer Learning Map — Index</title>
+<style>
+  :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#60a5fa;--glass:rgba(255,255,255,0.03)}
+  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;background:linear-gradient(180deg,#071127 0%,#0f1724 100%);color:#e6eef8}
+  .container{max-width:1100px;margin:28px auto;padding:20px}
+  h1{font-size:1.6rem;margin-bottom:8px}
+  p.lead{color:var(--muted);margin-top:0}
+  .tree{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,.6)}
+  ul{list-style:none;padding-left:18px}
+  li{margin:8px 0;position:relative}
+  .node{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:var(--glass);cursor:pointer}
+  .node:hover{box-shadow:0 6px 18px rgba(96,165,250,.06);transform:translateY(-2px)}
+  .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+  .chev{width:12px;height:12px;display:inline-block;transform:rotate(90deg)}
+  .children{margin-left:14px;border-left:1px dashed rgba(255,255,255,0.03);padding-left:12px;display:none}
+  .children.open{display:block}
+  .tooltip{position:absolute;left:calc(100% + 18px);top:50%;transform:translateY(-50%);min-width:340px;max-width:520px;background:#071428;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:none;z-index:40}
+  .node:hover + .tooltip{display:block}
+  .tooltip h3{margin:0 0 6px 0;font-size:14px}
+  .tooltip p{margin:0;color:var(--muted);font-size:13px;line-height:1.35}
+  .fullform{font-weight:600;color:var(--accent);margin-left:8px;font-size:12px}
+  .controls{display:flex;gap:8px;margin-bottom:12px}
+  .btn{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px 10px;border-radius:8px;cursor:pointer}
+  .search{margin-bottom:12px}
+  input[type=search]{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)}
+  footer{margin-top:14px;color:var(--muted);font-size:13px}
+  @media (max-width:900px){.tooltip{display:none!important;position:static;transform:none;margin-top:8px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Packet Tracer — Quick Learning Map</h1>
+  <p class="lead">Click a topic to expand. Hover (or tap) a node to read the full description and the full form of abbreviations.</p>
+
+  <div class="controls">
+    <button class="btn" id="expandAll">Expand all</button>
+    <button class="btn" id="collapseAll">Collapse all</button>
+  </div>
+  <div class="search"><input type="search" id="search" placeholder="Search topic e.g. OSPF, VLAN, Subnetting..." /></div>
+
+  <div class="tree" id="tree">
+    <ul>
+      <li>
+        <div class="node" data-key="basics">
+          <span class="chev">►</span>
+          <strong>Basics</strong>
+          <span class="fullform">(PT = Packet Tracer)</span>
+        </div>
+        <div class="tooltip"><h3>Basics — What & Why</h3><p>Packet Tracer (PT) is Cisco's network simulation tool used to build virtual labs. Start here: install PT, learn the UI, how to add devices, connect, run simulation vs real-time, save topologies, and use built-in activities.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="installation">Installation & UI</div>
+              <div class="tooltip"><h3>Installation & UI</h3><p>How to download (Cisco NetAcad for students), install, and navigate the PT workspace (device bar, workspace, simulation controls, CLI console, event list).</p></div>
+            </li>
+            <li>
+              <div class="node" data-key="firstlab">First Lab — Simple LAN</div>
+              <div class="tooltip"><h3>First Lab — Simple LAN</h3><p>Build a small LAN (2 PCs + switch), assign IPs, test ping, view ARP table — essential first hands-on exercise.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="networkfund">Network Fundamentals <span class="fullform">(OSI = Open Systems Interconnection)</span></div>
+        <div class="tooltip"><h3>Network Fundamentals</h3><p>OSI model layers, TCP/IP stack, Ethernet basics, MAC vs IP, frame/packet concepts, and how these map inside Packet Tracer. Learn to read packet flows in simulation.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="osi">OSI Model <span class="fullform">(Open Systems Interconnection)</span></div>
+              <div class="tooltip"><h3>OSI Model (Full form above)</h3><p>Know each layer 1–7: Physical, Data Link, Network, Transport, Session, Presentation, Application — and common devices/protocols at each layer.</p></div>
+            </li>
+            <li>
+              <div class="node" data-key="tcpip">TCP/IP & IP Addressing</div>
+              <div class="tooltip"><h3>TCP/IP & IP Addressing</h3><p>IPv4 structure, subnet mask, CIDR notation, IPv6 basics. Practice subnetting problems and then implement addressing in PT labs.</p></div>
+            </li>
+            <li>
+              <div class="node" data-key="subnetting">Subnetting — drill</div>
+              <div class="tooltip"><h3>Subnetting</h3><p>Binary-to-decimal, network/host portions, practice VLSM (Variable Length Subnet Mask). Build labs where you design IP plan across multiple VLANs.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="devices">Devices & Interfaces</div>
+        <div class="tooltip"><h3>Devices & Interfaces</h3><p>Routers, Switches, Hubs, PCs, Wireless devices, Firewalls. Learn Cisco CLI basics, interface states, show commands, and LED/port behavior in PT.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="cli">Cisco CLI Basics</div>
+              <div class="tooltip"><h3>Cisco CLI Basics</h3><p>Enable/privileged exec, global config, interface config, do show ip route, show run, copy run start. Save configs and practice common commands.</p></div>
+            </li>
+            <li>
+              <div class="node" data-key="switching">Switching — VLANs & STP</div>
+              <div class="tooltip"><h3>Switching — VLANs & STP</h3><p>VLAN = Virtual LAN. Configure VLANs, trunking (802.1Q), Inter-VLAN routing via router-on-a-stick, and Spanning Tree Protocol to prevent loops.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="routing">Routing</div>
+        <div class="tooltip"><h3>Routing</h3><p>Static routing first, then dynamic routing protocols: RIP, OSPF, EIGRP (concepts). Practice configuring OSPF area 0 and reading the routing table.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="static">Static Routing</div>
+              <div class="tooltip"><h3>Static Routing</h3><p>How to set up static routes, default route, troubleshooting with traceroute and show ip route.</p></div>
+            </li>
+            <li>
+              <div class="node" data-key="ospf">OSPF <span class="fullform">(Open Shortest Path First)</span></div>
+              <div class="tooltip"><h3>OSPF</h3><p>OSPF is a link-state routing protocol. Configure simple multi-area and single-area OSPF in PT and examine LSDB and route types (intra-area, inter-area, external).</p></div>
+            </li>
+            <li>
+              <div class="node" data-key="natacl">NAT & ACLs</div>
+              <div class="tooltip"><h3>NAT & ACLs</h3><p>NAT (Network Address Translation) types (static, dynamic, PAT). ACLs for filtering (standard vs extended). Build labs to filter traffic and provide internet access using NAT.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="services">Important Network Services</div>
+        <div class="tooltip"><h3>Network Services</h3><p>DHCP, DNS, HTTP, FTP, SMTP — configure servers and clients in PT, simulate requests, and observe packet flow in simulation view.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="dhcp">DHCP <span class="fullform">(Dynamic Host Configuration Protocol)</span></div>
+              <div class="tooltip"><h3>DHCP</h3><p>Configure DHCP server in PT, scopes, options, and troubleshoot ipconfig/ifconfig behavior on clients.</p></div>
+            </li>
+            <li>
+              <div class="node" data-key="dns">DNS <span class="fullform">(Domain Name System)</span></div>
+              <div class="tooltip"><h3>DNS</h3><p>Local DNS server setup in PT, host records, and how clients resolve names to IPs. Useful for real-world web troubleshooting.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="wireless">Wireless & WAN basics</div>
+        <div class="tooltip"><h3>Wireless & WAN</h3><p>Configure wireless APs and simple WAN links (PPP, serial). Learn basics of VLAN across wireless SSIDs and simple VPN concepts overview.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="wifi">Wi‑Fi basics</div>
+              <div class="tooltip"><h3>Wi‑Fi</h3><p>SSID, security modes (WPA2), associate clients in PT’s wireless devices, and get familiar with RF basics at a conceptual level.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="security">Security fundamentals for networks</div>
+        <div class="tooltip"><h3>Security fundamentals</h3><p>ACLs, SSH, secure SNMP, basic firewall concepts. Packet Tracer doesn't replace real firewalls, but it builds the conceptual foundation.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="ssh">SSH & secure management</div>
+              <div class="tooltip"><h3>SSH & secure management</h3><p>Configure local users, enable secret, domain lookup, generate RSA keys for SSH, and restrict vty access lines.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="troubleshoot">Troubleshooting & Analysis</div>
+        <div class="tooltip"><h3>Troubleshooting & Analysis</h3><p>Use ping, traceroute, show commands, debug (careful), simulation event list, and packet capture features. Practice common failure scenarios.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="showcmds">Key show commands</div>
+              <div class="tooltip"><h3>Key show commands</h3><p>show ip interface brief, show ip route, show vlan brief, show running-config, show interfaces.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="node" data-key="labs">Lab Projects & Practice</div>
+        <div class="tooltip"><h3>Lab Projects & Practice</h3><p>Starter labs: single LAN, Inter-VLAN routing, OSPF area lab, NAT Internet lab, ACL filtering lab, VPN overview, and packet capture case studies.</p></div>
+        <div class="children">
+          <ul>
+            <li>
+              <div class="node" data-key="ccna">Certification pathway</div>
+              <div class="tooltip"><h3>Certification pathway</h3><p>Packet Tracer is widely used to practice for CCNA. Study topics mapped to CCNA exam domains: networking fundamentals, security basics, automation & programmability.</p></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- 30-day study plan (new) -->
+  <section id="plan" style="margin-top:18px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <h2 style="font-size:1.1rem;margin:0">30‑Day Packet Tracer Mastery Plan</h2>
+      <div style="display:flex;gap:8px;align-items:center">
+        <div id="progressWrap" style="min-width:180px">
+          <div style="font-size:12px;color:var(--muted)">Progress</div>
+          <div style="height:10px;background:rgba(255,255,255,0.03);border-radius:6px;overflow:hidden">
+            <div id="progressBar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#7dd3fc)"></div>
+          </div>
+        </div>
+        <button class="btn" id="resetProgress">Reset</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+      <!-- Day cards inserted by JS -->
+      <div id="dayCards"></div>
+    </div>
+
+    <p style="color:var(--muted);font-size:13px;margin-top:10px">How to use: each day has a short objective, hands‑on lab, and suggested time. Click a card to reveal full steps and commands. Mark complete to save progress locally.</p>
+  </section>
+
+  <!-- UI/UX additions -->
+  <style>
+    .dayCard{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .dayHeader{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .dayTitle{font-weight:700}
+    .dayMeta{font-size:12px;color:var(--muted)}
+    .dayDetails{margin-top:8px;color:var(--muted);display:none;font-size:13px}
+    .dayCard.open .dayDetails{display:block}
+    .completeBadge{background:rgba(0,0,0,0.3);padding:6px 8px;border-radius:999px;font-size:12px}
+  </style>
+
+  <script>
+  // 30-day plan data structure
+  const plan = [
+    {day:1,title:'Install & First Lab',time:'30–60 mins',obj:'Install Packet Tracer (NetAcad) and build a 2-PC small LAN. Learn workspace, simulation/realtime, and device basics.',steps:[
+      'Download & install Packet Tracer (use Cisco NetAcad if available).','Create a new file, add 2 PCs and a switch, connect with copper straight-through, configure IPs, test ping.'
+    ]},
+    {day:2,title:'CLI Basics',time:'45–75 mins',obj:'Learn basic Cisco CLI modes and commands.',steps:[
+      'Practice enable, configure terminal, interface config, shutdown/no shutdown, hostname, and saving config (copy run start).','Use show interfaces, show ip interface brief.'
+    ]},
+    {day:3,title:'OSI & Packet Flow',time:'45–90 mins',obj:'Understand OSI layers and view packet flow in Simulation mode.',steps:[
+      'Map common protocols to OSI layers.','Send a ping in Simulation and inspect packet details & event list.'
+    ]},
+    {day:4,title:'IPv4 Addressing & Subnetting I',time:'60–90 mins',obj:'Binary basics and /24, /25 conversions.',steps:['Convert binary to decimal, create /24 and /25 subnets, assign addresses in PT.']},
+    {day:5,title:'Subnetting II — VLSM',time:'60–90 mins',obj:'Variable Length Subnet Masks and IP planning.',steps:['Design an IP plan for 3 subnets with different sizes, implement in PT.']},
+    {day:6,title:'Switching — VLANs',time:'60–90 mins',obj:'Create VLANs and assign ports.',steps:['Create 2 VLANs, assign switch ports, test isolation between VLANs.']},
+    {day:7,title:'Inter‑VLAN Routing',time:'60–120 mins',obj:'Router-on-a-stick and SVI.',steps:['Configure router-on-a-stick with subinterfaces, or use L3 switch with SVIs. Test cross‑VLAN ping.']},
+    {day:8,title:'Trunking & 802.1Q',time:'45–75 mins',obj:'Understand trunk links and native VLAN.',steps:['Configure trunk between switch and router/switch, observe tags in simulation.']},
+    {day:9,title:'Spanning Tree Protocol (STP)',time:'45–75 mins',obj:'Prevent loops — root bridge and port states.',steps:['Create a multi‑switch loop, observe STP convergence and root election.']},
+    {day:10,title:'Static Routing',time:'45–75 mins',obj:'Manual routes and default routes.',steps:['Configure static routes across 2 routers and test connectivity with traceroute.']},
+    {day:11,title:'Dynamic Routing — RIP',time:'60–90 mins',obj:'Simple distance-vector routing.',steps:['Configure RIP, advertise networks, check routing table updates.']},
+    {day:12,title:'Dynamic Routing — OSPF I',time:'60–120 mins',obj:'OSPF basics and single area.',steps:['Configure OSPF area 0 across routers, inspect show ip ospf neighbor and routing table.']},
+    {day:13,title:'OSPF II — Areas & LSDB',time:'60–120 mins',obj:'Area types and LSAs.',steps:['Create multi-area OSPF (area 0 and area 1), view LSDB and type differences.']},
+    {day:14,title:'NAT & Internet Access Lab',time:'60–120 mins',obj:'PAT, static NAT and basic internet access from private network.',steps:['Set up NAT overload (PAT) on a border router and test internet connectivity from LAN.']},
+    {day:15,title:'ACLs — Filtering Traffic',time:'60–90 mins',obj:'Standard vs Extended ACLs.',steps:['Create ACLs to permit/deny traffic and place them on interfaces for inbound/outbound filtering.']},
+    {day:16,title:'DHCP & DNS Services',time:'45–90 mins',obj:'Auto IP assignment and name resolution.',steps:['Configure DHCP pools, assign to vlan interfaces and set up a DNS entry in PT server.']},
+    {day:17,title:'Wireless Basics in PT',time:'45–75 mins',obj:'Configure APs and wireless clients in Packet Tracer.',steps:['Add AP, create SSID, set security, associate clients, and test connectivity.']},
+    {day:18,title:'WAN & PPP',time:'60–90 mins',obj:'Serial links and PPP authentication basics.',steps:['Create a PPP link between routers, enable authentication (CHAP/ PAP) and test.']},
+    {day:19,title:'SSH & Secure Management',time:'45–75 mins',obj:'Secure remote access to devices.',steps:['Configure local user database, domain name, crypto key, and enable SSH on vty lines.']},
+    {day:20,title:'Logging & Monitoring',time:'45–75 mins',obj:'Use show commands, syslog basics and NetFlow overview.',steps:['Configure logging buffer, send logs to a simulated syslog server, use show logging.']},
+    {day:21,title:'Basic Firewall Concepts',time:'45–75 mins',obj:'ACLs vs firewall — concepts and packet filtering.',steps:['Simulate traffic filtering, explain stateful vs stateless filtering conceptually.']},
+    {day:22,title:'Troubleshooting Lab I',time:'60–120 mins',obj:'Common failures and diagnosis.',steps:['Create common failure scenarios (wrong IP, shutdown, missing route), diagnose using show and simulation.']},
+    {day:23,title:'Troubleshooting Lab II — Packet Capture',time:'60–120 mins',obj:'Use simulation to capture and read packet details.',steps:['Capture TCP/UDP/DNS exchange, analyze flags and payload in simulation.']},
+    {day:24,title:'DHCP & VLAN large lab',time:'60–120 mins',obj:'Combine services across VLANs with DHCP relay.',steps:['Set up multiple VLANs, DHCP relay (ip helper-address) and verify client leases.']},
+    {day:25,title:'Intro to Automation',time:'60–90 mins',obj:'Basic scripting and saving configs programmatically.',steps:['Export configs, explain TFTP/FTP for backups, intro to simple Python or EEM scripts overview (conceptual).']},
+    {day:26,title:'CCNA Topic Review I',time:'60–120 mins',obj:'Review core topics: IP, VLANs, routing basics.',steps:['Recreate earlier labs and time yourself for quicker config.']},
+    {day:27,title:'CCNA Topic Review II',time:'60–120 mins',obj:'Security & Services review.',steps:['Cover ACLs, NAT, DHCP, and basic security tasks.']},
+    {day:28,title:'Mock Practical Test',time:'90–150 mins',obj:'Simulate a timed CCNA-style practical in Packet Tracer.',steps:['Use a worksheet of tasks to complete under time pressure.']},
+    {day:29,title:'Project — Small Office Network',time:'120–240 mins',obj:'Design and implement a small office with Internet, VLANs, DHCP, NAT, and ACLs.',steps:['Design network diagram, implement in PT, test all services and document configuration.']},
+    {day:30,title:'Final Review & Next Steps',time:'60–90 mins',obj:'Document your labs, export configs, plan certification or job steps.',steps:['Save topologies, export configs, write short README for your project, prepare for interviews with show commands.']}
+  ];
+
+  // Render day cards
+  function renderPlan(){
+    const container = document.getElementById('dayCards');
+    container.innerHTML = '';
+    const completed = loadProgress();
+    plan.forEach(item=>{
+      const div = document.createElement('div'); div.className='dayCard';
+      if(completed.includes(item.day)) div.classList.add('completed');
+      div.innerHTML = `
+        <div class="dayHeader">
+          <div>
+            <div class="dayTitle">Day ${item.day}: ${item.title}</div>
+            <div class="dayMeta">${item.time} · ${item.obj}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+            <div class="completeBadge">${completed.includes(item.day)?'Completed':'Pending'}</div>
+            <div style="display:flex;gap:6px"><button class="btn small" data-day="${item.day}" onclick="toggleDetails(event)">Details</button><button class="btn small" data-day="${item.day}" onclick="toggleComplete(event)">${completed.includes(item.day)?'Unmark':'Mark complete'}</button></div>
+          </div>
+        </div>
+        <div class="dayDetails">
+          <strong>Steps / Lab:</strong>
+          <ol>${item.steps.map(s=>'<'+'li>'+s+'<'+'/li>').join('')}</ol>
+          <div style="margin-top:8px;color:var(--muted)"><em>Commands / Hints:</em> Use <code>show ip interface brief</code>, <code>show ip route</code>, <code>show running-config</code>, <code>no shutdown</code>, <code>interface fa0/1</code> etc. Refer to tooltips in the main map for short commands per topic.</div>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+    updateProgressBar();
+  }
+
+  // Toggle details
+  function toggleDetails(e){
+    e.stopPropagation();
+    const day = +e.currentTarget.getAttribute('data-day');
+    const card = e.currentTarget.closest('.dayCard');
+    card.classList.toggle('open');
+  }
+
+  function loadProgress(){
+    try{
+      const raw = localStorage.getItem('pt_plan_progress');
+      return raw ? JSON.parse(raw) : [];
+    }catch(e){return []}
+  }
+  function saveProgress(arr){
+    localStorage.setItem('pt_plan_progress', JSON.stringify(arr));
+    renderPlan();
+  }
+
+  function toggleComplete(e){
+    e.stopPropagation();
+    const day = +e.currentTarget.getAttribute('data-day');
+    const arr = loadProgress();
+    const idx = arr.indexOf(day);
+    if(idx===-1) arr.push(day); else arr.splice(idx,1);
+    saveProgress(arr);
+  }
+
+  document.getElementById('resetProgress').addEventListener('click', ()=>{localStorage.removeItem('pt_plan_progress');renderPlan();});
+
+  function updateProgressBar(){
+    const completed = loadProgress();
+    const pct = Math.round((completed.length / plan.length) * 100);
+    document.getElementById('progressBar').style.width = pct + '%';
+  }
+
+  // Initialize on load
+  renderPlan();
+  // expose to global for inline handlers
+  window.toggleDetails = toggleDetails;
+  window.toggleComplete = toggleComplete;
+  </script>
+
+
+  <!-- Detailed Hinglish descriptions & commands -->
+  <section id="hinglish-details" style="margin-top:18px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
+    <h2 style="font-size:1.1rem;margin:0 0 8px 0">Detailed Topics — Hinglish explanations + Important Commands</h2>
+    <p style="color:var(--muted);margin:0 0 12px 0">Yeh section short aur clear Hinglish mein har important topic ka long description aur commonly used Cisco commands (what / why / where / expected result) deta hai. Copy kar ke Packet Tracer mein practice karo.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px">
+      <!-- Basics -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Basics — Packet Tracer (PT)</h3>
+        <p style="color:var(--muted)">PT ek simulation tool hai jisme aap virtual devices (routers, switches, PCs) connect karke networking practise karte ho. Real hardware ki tarah CLI aur GUI dono available hain.</p>
+        <strong>Commands / Steps:</strong>
+        <ul style="color:var(--muted)">
+          <li><code>File → New</code> — naya topology banaane ke liye.</li>
+          <li><code>Save</code> / <code>File → Save As</code> — topology save karna (important).</li>
+          <li>Simulation mode: packet ko inspect karke OSI layer wise dekho — expected: packet details open hoti hain.</li>
+        </ul>
+      </div>
+
+      <!-- CLI Basics -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Cisco CLI Basics — Kaliye simple</h3>
+        <p style="color:var(--muted)">CLI modes: User EXEC (&gt;), Privileged EXEC (#), Global Config (config)#, Interface config (config-if)#. Har mode ka purpose alag — read-only / diagnostic se lekar configuration tak.</p>
+        <strong>Important commands (what | why | where | result):</strong>
+        <ul style="color:var(--muted)">
+          <li><code>enable</code> — kya: user exec se privileged exec mode me jaate; kyon: kuch commands sirf # mode me chalti; expected: prompt changes from <code>Router&gt;</code> to <code>Router#</code>.</li>
+          <li><code>configure terminal (conf t)</code> — kya: global config mode; kyon: interfaces/config options set karne ke liye; expected: prompt <code>Router(config)#</code>.</li>
+          <li><code>hostname R1</code> — kya: device name set; kyon: topology me identify karna; expected: prompt shows new name.</li>
+          <li><code>interface fa0/0</code> — kya: specific interface pe jao; kyon: IP assign, shutdown/no shutdown; expected: prompt <code>Router(config-if)#</code>.</li>
+          <li><code>ip address 192.168.1.1 255.255.255.0</code> — kya: IP set; kyon: device ko network me communicate karana; expected: interface up if connected correctly.</li>
+          <li><code>no shutdown</code> — kya: interface enable; kyon: by default some interfaces shutdown ho sakte; expected: interface up line protocol up (check show interfaces).</li>
+          <li><code>copy running-config startup-config</code> — kya: save current config to NVRAM; kyon: reboot ke baad settings chahiye; expected: confirmation and saved message.</li>
+          <li><code>show running-config</code> — kya: current config dekhna; kyon: troubleshoot and verify; expected: full running configuration shows.</li>
+          <li><code>show ip interface brief</code> — kya: quick status of interfaces; kyon: fast troubleshoot; expected: list of interfaces, IPs, and up/down.</li>
+        </ul>
+      </div>
+
+      <!-- Subnetting -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Subnetting (Hinglish)</h3>
+        <p style="color:var(--muted)">Subnetting ka matlab IP range ko chote-chote networks me divide karna. Binary samajhna zaroori hai: host bits aur network bits alag kar ke subnet mask banta.</p>
+        <strong>Examples & Commands:</strong>
+        <ul style="color:var(--muted)">
+          <li>Practice: convert /24 = 255.255.255.0 (256 addresses, 254 usable). /26 = 255.255.255.192 (64 addresses, 62 usable).</li>
+          <li>Packet Tracer: assign IP on PC ya interface: <code>ip address 10.0.0.1 255.255.255.192</code> (interface config mode). Expected: correct network connectivity within subnet.</li>
+        </ul>
+      </div>
+
+      <!-- VLANs & Switching -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>VLANs & Switching</h3>
+        <p style="color:var(--muted)">VLAN = Virtual LAN. Ek physical switch me multiple logical networks banate ho. Trunking se multiple VLANs ek link se travel kar sakte (802.1Q tagging).</p>
+        <strong>Important switch commands (what | why | where | result):</strong>
+        <ul style="color:var(--muted)">
+          <li><code>enable</code> → <code>conf t</code> — enter config mode.</li>
+          <li><code>vlan 10</code> — kya: VLAN create karna; expected: VLAN created in vlan database.</li>
+          <li><code>name Sales</code> — kya: VLAN name set; expected: visible in <code>show vlan brief</code>.</li>
+          <li><code>interface range fa0/1 - 2</code> / <code>switchport access vlan 10</code> — kya: ports ko VLAN assign; expected: PC connected to that port gets in same VLAN (if IPs set).</li>
+          <li><code>interface fa0/24</code> / <code>switchport trunk encapsulation dot1q</code> / <code>switchport mode trunk</code> — kya: trunk port configure; expected: trunk shows in <code>show interfaces trunk</code>.</li>
+          <li><code>show vlan brief</code> &amp; <code>show interfaces trunk</code> — verify configuration.</li>
+        </ul>
+      </div>
+
+      <!-- Inter-VLAN & Router on a stick -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Inter‑VLAN Routing (Router-on-a-stick)</h3>
+        <p style="color:var(--muted)">Jab VLANs alag networks ho to unko communicate karane ke liye L3 device chahiye. Router-on-a-stick me router ke subinterfaces bana ke 802.1Q tagging use karte hain.</p>
+        <strong>Commands (router):</strong>
+        <ul style="color:var(--muted)">
+          <li><code>interface g0/0.10</code> — kya: subinterface; kyon: VLAN 10 traffic tag karne; expected: new logical interface.</li>
+          <li><code>encapsulation dot1Q 10</code> — kya: VLAN tag set; expected: router accepts tagged frames for VLAN 10.</li>
+          <li><code>ip address 192.168.10.1 255.255.255.0</code> — kya: SVI IP for that VLAN; expected: default gateway for VLAN clients.</li>
+          <li><code>show ip route</code> / <code>show ip interface brief</code> — verify reachability.</li>
+        </ul>
+      </div>
+
+      <!-- STP -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Spanning Tree Protocol (STP)</h3>
+        <p style="color:var(--muted)">STP loops ko rokta hai by blocking certain ports so single active path rahe. Important jab multiple switch links ho.</p>
+        <strong>Commands &amp; checks:</strong>
+        <ul style="color:var(--muted)">
+          <li><code>show spanning-tree</code> — kya: STP state dekho; expected: root bridge, port roles (root/alt/designated).</li>
+          <li><code>spanning-tree vlan 1 priority 4096</code> — kya: priority lower karoge to root banega; expected: root bridge change after convergence.</li>
+        </ul>
+      </div>
+
+      <!-- Routing: Static & OSPF -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Routing — Static &amp; OSPF (Hinglish)</h3>
+        <p style="color:var(--muted)">Static routing simple hai (manual). OSPF dynamic routing protocol hai jo networks ko automatically routes share kar ke path choose karta.</p>
+        <strong>Static commands:</strong>
+        <ul style="color:var(--muted)">
+          <li><code>ip route 10.0.2.0 255.255.255.0 192.168.1.2</code> — kya: static route add; kyon: jab next-hop fixed ho; expected: route appears in <code>show ip route</code>.</li>
+        </ul>
+        <strong>OSPF basics commands:</strong>
+        <ul style="color:var(--muted)">
+          <li><code>router ospf 1</code> — kya: enable OSPF process 1; expected: process running in router.</li>
+          <li><code>network 192.168.1.0 0.0.0.255 area 0</code> — kya: advertise network into OSPF area 0; expected: neighbors form, routes learned.</li>
+          <li><code>show ip ospf neighbor</code> — kya: OSPF neighbors; expected: list of adjacent routers and states.</li>
+        </ul>
+      </div>
+
+      <!-- NAT & ACLs -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>NAT (PAT) &amp; ACLs — Internet access & filtering</h3>
+        <p style="color:var(--muted)">NAT private IPs ko public IP me translate karta (internet access). ACLs traffic ko allow/deny karte — security ka basic tool.</p>
+        <strong>NAT (PAT) example:</strong>
+        <ul style="color:var(--muted)">
+          <li><code>access-list 1 permit 192.168.10.0 0.0.0.255</code> — define inside range for NAT.</li>
+          <li><code>ip nat pool MYPOOL 203.0.113.10 203.0.113.10 netmask 255.255.255.0</code> — kya: public pool (example).</li>
+          <li><code>ip nat inside source list 1 interface g0/0 overload</code> — kya: PAT on interface; expected: outbound clients share single public IP.</li>
+        </ul>
+        <strong>ACLs example:</strong>
+        <ul style="color:var(--muted)">
+          <li><code>access-list 100 permit tcp any any eq 80</code> — kya: permit HTTP; expected: web traffic allowed.</li>
+          <li><code>interface g0/1</code> / <code>ip access-group 100 in</code> — apply ACL; expected: filtered traffic per ACL rules.</li>
+        </ul>
+      </div>
+
+      <!-- DHCP & DNS -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>DHCP &amp; DNS</h3>
+        <p style="color:var(--muted)">DHCP automatic IP assign karta. DNS naam ko IP me convert karta. PT me dono services as servers available hain.</p>
+        <strong>DHCP commands (router as DHCP server):</strong>
+        <ul style="color:var(--muted)">
+          <li><code>ip dhcp pool VLAN10</code> — kya: create DHCP pool; expected: pool created.</li>
+          <li><code>network 192.168.10.0 255.255.255.0</code> — kya: pool network; expected: clients in this network get IPs from pool.</li>
+          <li><code>default-router 192.168.10.1</code>, <code>dns-server 8.8.8.8</code> — kya: options to give to clients.</li>
+          <li><code>show ip dhcp binding</code> — kya: view assigned leases; expected: list of MAC-to-IP leases.</li>
+        </ul>
+        <strong>DNS (PT Server):</strong>
+        <ul style="color:var(--muted)">
+          <li>Use PT Server device → Services tab → DNS → Add A records (e.g., www.example.com → 203.0.113.5). Expected: clients can ping hostname and resolve to IP.</li>
+        </ul>
+      </div>
+
+      <!-- Troubleshooting -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Troubleshooting — Practical</h3>
+        <p style="color:var(--muted)">Common commands aur unka use: jaldi problem locate karne ke liye yeh must-know.</p>
+        <ul style="color:var(--muted)">
+          <li><code>ping &lt;ip&gt;</code> — connectivity test; expected: replies or timeouts.</li>
+          <li><code>traceroute &lt;ip&gt;</code> — path check; expected: list of hops to destination.</li>
+          <li><code>show ip interface brief</code> — interface status (up/down). Expected: identify down interfaces.</li>
+          <li><code>show ip route</code> — routing table; expected: verify learned/static routes.</li>
+          <li><code>debug ip route</code> (careful in real devices) — kya: live route updates; kyon: deep troubleshooting; expected: verbose logs.</li>
+        </ul>
+      </div>
+
+      <!-- Security basics -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Security fundamentals</h3>
+        <p style="color:var(--muted)">SSH, user management aur basic hardening commands. Packet Tracer me ye concepts practice karo lekin real firewalls bhi seekho.</p>
+        <ul style="color:var(--muted)">
+          <li><code>username admin privilege 15 secret MyP@ss</code> — local user create; expected: user stored in running-config.</li>
+          <li><code>line vty 0 4</code> / <code>transport input ssh</code> / <code>login local</code> — enable SSH login only; expected: telnet disabled if transport input restricts.</li>
+          <li><code>service password-encryption</code> — simple obfuscation for plain-text passwords in config.</li>
+        </ul>
+      </div>
+
+      <!-- Labs & Projects guidance -->
+      <div style="background:rgba(0,0,0,0.03);padding:10px;border-radius:8px">
+        <h3>Labs &amp; Projects — Tips</h3>
+        <p style="color:var(--muted)">Har lab ka goal clear rakho: objective, topology diagram, step-by-step commands, expected verification commands (show/ ping/ traceroute). Document har lab.</p>
+        <strong>Verification commands:</strong>
+        <ul style="color:var(--muted)">
+          <li><code>show ip interface brief</code>, <code>show ip route</code>, <code>show running-config</code>, <code>show arp</code>, <code>show mac address-table</code>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p style="color:var(--muted);margin-top:12px">Agar aap chaho toh main har day-card ke under direct "Hinglish Long Description" aur "Complete Commands" expand blocks bhi add kar doon — batado. Abhi maine core topics cover kiye hain jo 80% practical needs ko fulfill karenge.</p>
+  </section>
+
+<footer>Tip: Use the search box to quickly highlight a topic. Copy this file as index.html and open in any browser. Happy learning!</footer>
+</div>
+
+<script>
+// Basic expand/collapse and search
+const nodes = document.querySelectorAll('.node');
+nodes.forEach(n=>{
+  n.addEventListener('click', e=>{
+    e.stopPropagation();
+    const next = n.nextElementSibling && n.nextElementSibling.classList.contains('tooltip');
+    // children container is 2 siblings ahead in this structure
+    let child = n.parentElement.querySelector('.children');
+    if(child) child.classList.toggle('open');
+    // rotate chevron
+    const chev = n.querySelector('.chev');
+    if(chev) chev.textContent = child && child.classList.contains('open') ? '▼' : '►';
+  });
+});
+
+document.getElementById('expandAll').addEventListener('click', ()=>{
+  document.querySelectorAll('.children').forEach(c=>c.classList.add('open'));
+  document.querySelectorAll('.chev').forEach(ch=>ch.textContent='▼');
+});
+document.getElementById('collapseAll').addEventListener('click', ()=>{
+  document.querySelectorAll('.children').forEach(c=>c.classList.remove('open'));
+  document.querySelectorAll('.chev').forEach(ch=>ch.textContent='►');
+});
+
+// Search
+const search = document.getElementById('search');
+search.addEventListener('input', ()=>{
+  const q = search.value.trim().toLowerCase();
+  document.querySelectorAll('.node').forEach(n=>{
+    const text = n.textContent.toLowerCase();
+    if(q === '' || text.includes(q)){
+      n.style.display='flex';
+      let p = n.parentElement; p.style.display='block';
+    } else {
+      n.style.display='none';
+      let p = n.parentElement; // keep parent visible so structure isn't broken
+    }
+  });
+});
+</script>
+</body>
+</html>
